@@ -51,14 +51,13 @@
         </div>
         <div class="span8">
           <ul class="breadcrumb notop">
-            <li><a href="#">Home</a><span class="divider">/</span></li>
-            <li class="active">About</li>
+            <li><a href="index.php">Home</a><span class="divider">/</span></li>
+            <li class="active">แจ้งซ่อมระบบ</li>
           </ul>
         </div>
       </div>
     </div>
-
-  </section>
+  </section><br>
 
   <section id="maincontent">
     <div class="container">
@@ -67,10 +66,8 @@
           <div class="well">
             <div class="centered e_bounce">
               <i class="icon-bg-light icon-circled icon-pencil icon-5x active"></i><br>
-              <h4><strong><a href="table.php">แจ้งซ่อมอุปกรณ์</strong></h4></a>
-              <p>
-                Dolorem adipiscing definiebas ut nec. Dolore consectetuer eu vim, elit molestie ei has, petentium imperdiet in pri. Mel virtute efficiantur ne, zril omnes sed no, sit eu duis semper.
-              </p>
+              <h4><strong><a href="user.php">แจ้งซ่อมอุปกรณ์</strong></h4></a>
+              
             </div>
           </div>
         </div>
@@ -78,71 +75,15 @@
           <div class="well">
             <div class="centered e_bounce">
               <i class="icon-bg-light icon-circled icon-bar-chart icon-5x active"></i>
-              <h4><strong><a href="table.php">ตารางการแจ้งซ่อม</strong></h4></a>
-              <p>
-                Dolorem adipiscing definiebas ut nec. Dolore consectetuer eu vim, elit molestie ei has, petentium imperdiet in pri. Mel virtute efficiantur ne, zril omnes sed no, sit eu duis semper.
-              </p>
+              <h4><strong><a href="tableu.php">ตารางการแจ้งซ่อม</strong></h4></a>
+              
             </div>
           </div>
-        </div>
-        
+        </div> 
       </div>
-      <div class="row">
-        <div class="span12">
-          <div class="solid_line">
-          </div>
-        </div>
-      </div>
-      <div class="row">
-        <div class="span12">
-          <h4>Our services</h4>
-          <!-- start: Accordion -->
-          <div class="accordion" id="accordion2">
-            <div class="accordion-group">
-              <div class="accordion-heading">
-                <a class="accordion-toggle active" data-toggle="collapse" data-parent="#accordion2" href="#collapseOne">
-						<i class="icon-minus"></i> Database management</a>
-              </div>
-              <div id="collapseOne" class="accordion-body collapse in">
-                <div class="accordion-inner">
-                  Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird
-                  on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table,
-                  raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
-                </div>
-              </div>
-            </div>
-            <div class="accordion-group">
-              <div class="accordion-heading">
-                <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseTwo">
-						<i class="icon-plus"></i> UI development</a>
-              </div>
-              <div id="collapseTwo" class="accordion-body collapse">
-                <div class="accordion-inner">
-                  Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird
-                  on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table,
-                  raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
-                </div>
-              </div>
-            </div>
-            <div class="accordion-group">
-              <div class="accordion-heading">
-                <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseThree">
-						<i class="icon-plus"></i> Social media</a>
-              </div>
-              <div id="collapseThree" class="accordion-body collapse">
-                <div class="accordion-inner">
-                  Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird
-                  on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table,
-                  raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
-                </div>
-              </div>
-            </div>
-          </div>
-          <!--end: Accordion -->
-        </div>
-      </div>
+      
     </div>
-  </section>
+  </section><br><br><br><br>
   <?php include 'footer.php'; ?>
 
   <script src="assets/js/jquery.js"></script>
@@ -167,3 +108,47 @@
 </body>
 
 </html>
+
+
+</section>
+  <section id="maincontent">
+    <div class="container">
+      <div class="row">
+        <div class="span4">
+          <div class="features">
+            <div class="icon">
+              <i class="icon-bg-dark icon-circled icon-pencil icon-5x "></i>
+            </div>
+            <div class="features_content">
+              <a href="user.php"><h3>แจ้งซ่อมอุปกรณ์</h3></a>
+              <p class="left">
+                การแจ้งซ่อมอุปกรณ์ภายในตึก ลิฟลิฟ
+              </p>
+              <a href="user.php" class="btn btn-color btn-rounded">แจ้งซ่อม</a>
+            </div>
+          </div>
+        </div>
+        <div class="span4">
+          <div class="features">
+            <div class="icon">
+              <i class="icon-bg-dark icon-circled icon-bar-chart icon-5x"></i>
+            </div>
+            <div class="features_content">
+              <a href="table.php"><h3>ตารางการแจ้งซ่อม</h3></a>
+              <p class="left">
+                ตารางตรวจเช็คการแจ้งซ่อม
+              </p>
+              <a href="tableu.php" class="btn btn-color btn-rounded">ตารางการแจ้งซ่อม</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- blank divider -->
+      <div class="row">
+        <div class="span12">
+          <div class="blank10"></div>
+        </div>
+      </div>
+    </div>
+  </section>

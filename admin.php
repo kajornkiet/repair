@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="utf-8">
-  <title>ระแบบแจ้งซ่อม</title>
+  <title>ระแบบแจ้งซ่อม Admin</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Clean responsive bootstrap website template">
   <meta name="author" content="">
@@ -44,18 +44,44 @@
 <body>
 <?php include 'menu.php'; ?>
   <section id="intro">
+
     <div class="container">
       <div class="row">
-        <div class="span12">
+        <div class="span6">
           <h2><strong>ระบบแจ้งซ่อม <span class="highlight primary">Admin</span></strong></h2>
           <p class="lead">
-            การแจ้งซ่อมแบบมีคุณภาพ
+            Lorem ipsum dolor sit amet, qui corpora oportere cu. Usu et iudico maluisset, pro ut lobortis vituperatoribus, percipit aliquando efficiendi est ex.
           </p>
           <ul class="list list-ok strong bigger">
-            <li>แจ้งไว</li>
-            <li>รู้ไว</li>
-            <li>ทันใจ</li>
+            <li>100% Compatible with twitter bootstrap</li>
+            <li>Valid HTML5 code and well structured</li>
+            <li>Really updatable and easy to customize</li>
           </ul>
+
+        </div>
+        <div class="span6">
+
+          <div class="group section-wrap upper" id="upper">
+            <div class="section-2 group">
+              <ul id="images" class="rs-slider">
+                <li class="group">
+                  <a>
+                    <img src="assets/img/slides/refine/1.jpg" alt="" />
+                </a>
+                </li>
+                <li class="group">
+                  <a class="slide-parent">
+                    <img src="assets/img/slides/refine/2.jpg" alt=""/>
+                </a>
+                </li>
+                <li class="group">
+                  <img src="assets/img/slides/refine/1.jpg" alt="" />
+                </li>
+              </ul>
+            </div>
+            <!-- /.section-2 -->
+          </div>
+
         </div>
       </div>
     </div>
@@ -63,35 +89,25 @@
   <section id="maincontent">
     <div class="container">
       <div class="row">
-        <div class="span4">
-          <div class="features">
-            <div class="icon">
-              <i class=" icon-circled icon-edit icon-5x"></i>
-            </div>
-            <div class="features_content">
-              <a href="#"><h3>สถิติการซ่อมอุกรณ์</h3></a>
-              <p class="left">
-                ประวัติการซ่อมอุปกรณ์ภายในองค์กร
-              </p>
-              <a href="table.php" class="btn btn-color btn-rounded">สถิติการแจ้งซ่อม</a>
+        <div class="span6">
+          <div class="well">
+            <div class="centered e_bounce">
+              <i class="icon-bg-dark icon-circled icon-bar-chart icon-5x "></i><br><br>
+              <h4><strong><a href="user.php">สถิติการซ่อมอุกรณ์</strong></h4></a>
+              
             </div>
           </div>
         </div>
-        <div class="span4">
-          <div class="features">
-            <div class="icon">
-              <i class=" icon-circled icon-bar-chart icon-5x"></i>
-            </div>
-            <div class="features_content">
-              <a href="table.php"><h3>ตารางการแจ้งซ่อม</h3></a>
-              <p class="left">
-                ตารางตรวจเช็คการแจ้งซ่อม
-              </p>
-              <a href="tablea.php" class="btn btn-color btn-rounded">ตารางการแจ้งซ่อม</a>
+        <div class="span6">
+          <div class="well">
+            <div class="centered e_bounce">
+              <i class="icon-bg-dark icon-circled icon-table icon-5x "></i><br><br>
+              <h4><strong><a href="tablea.php">ตารางการแจ้งซ่อม</strong></h4></a>
+              
             </div>
           </div>
-        </div>
-      </div>
+        </div> 
+      </div>      
     </div>
   </section>
       <!-- blank divider -->

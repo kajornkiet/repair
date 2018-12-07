@@ -46,16 +46,71 @@
 </head>
 
 <body>
+<?php 
+include 'config.php';
+
+
+if ( isset($_POST[submit]) ) {
+
+  $date = $_POST[date];
+  $code = $_POST[code];
+  $equipment = $_POST[equipment];
+  $brand = $_POST[brand];
+  $gen = $_POST[generation];
+  $issue = $_POST[issue];
+  $username = $_POST[username];
+  $department = $_POST[department];
+  $phone = $_POST[phonenumber];
+  $email = $_POST[email];
+  $manager = $_POST[manager];
+  $status = $_POST[status];
+  $description = $_POST[description];
+
+  $sql = "INSERT INTO report (  date,code,equipment,brand,generation,issue,username,department,phonenumber,email,manager,status,description )  values (  '$date','$code','$equipment','$brand','$gen','$issue' ,'$username','$department','$phone','$email','$manager','$status','$description' )  ;";
+
+  $query = pg_query($sql);
+
+}
+if (  isset( $_POST[delete] ) ) {
+
+  $id = $_POST[id];
+  $sql = "DELETE from report  where id = '$id' ;";
+  $query = pg_query($sql);
+  $text = $sql ;
+}
+if (  isset( $_POST[update] ) ) {
+  $id = $_POST[id];
+  $date = $_POST[date];
+  $code = $_POST[code];
+  $equipment = $_POST[equipment];
+  $brand = $_POST[brand];
+  $gen = $_POST[generation];
+  $issue = $_POST[issue];
+  $username = $_POST[username];
+  $department = $_POST[department];
+  $phone = $_POST[phonenumber];
+  $email = $_POST[email];
+  $manager = $_POST[manager];
+  $status = $_POST[status];
+  $description = $_POST[description];
+  $sql = "UPDATE report set  date,code,equipment,brand,generation,issue,username,department,phonenumber,email,manager,status,description = '$date','$code','$equipment','$brand','$gen','$issue' ,'$username','$department','$phone','$email','$manager','$status','$description' where id = '$id' ;";
+  $query = pg_query($sql);
+
+}
+
+?>
+
 <?php include 'menu.php'; ?>
   <section id="subintro">
     <div class="container">
       <div class="row">
         <div class="span4">
-          <h3>Table</strong></h3>
+          <h3>หน้า <strong>แจ้งซ่อมอุปกรณ์ Admin</strong></h3>
         </div>
         <div class="span8">
           <ul class="breadcrumb notop">
-            
+            <li><a href="index.php">Home</a><span class="divider">/</span></li>
+            <li class="active">หน้าแจ้งซ่อมอุปกรณ์</li>
           </ul>
         </div>
       </div>
@@ -78,37 +133,64 @@
               </ul>
             </div></h7>
             </div>
+            <div class="span12">
+          <article>
+          </div>
             <div class="row">
               <div class="span12">
                 <aside>
                   <div class="clearfix">             
                     <table class="table table-bordered">
+                      <form action="tablea.php" method="post"> 
                       <thead>
-                        <tr>
-                          <th>ลำดับ</th>
+                        <tr> 
                           <th>วันที่แจ้ง</th>
-                          <th>ชื่อ-นามสกุล</th>
-                          <th>E-mail</th>
+                          <th>รหัสครุภัณฑ์</th>
                           <th>อุปกรณ์</th>
+                          <th>ยี่ห้อ</th>
+                          <th>รุ่น</th>
                           <th>ปัญหา</th>
+                          <th>ชื่อผู้แจ้งซ่อม</th>
+                          <th>หน่วยงาน</th>
+                          <th>เบอร์ติดต่อ</th>
+                          <th>E-mail</th>
                           <th>ผู้ดำเนินการ</th>
                           <th>สถานะ</th>
                           <th>รายละเอียด</th>
+                          <th></th>
                         </tr>
                       </thead>
+                      <?php echo $text; ?>
+                      <?php 
+                          $sql1 = 'SELECT * from report  order by id asc';
+                          $query1 = pg_query($sql1);
+                          while ( $arr1 = pg_fetch_array( $query1 ) ) {
+                      ?>
                       <tbody>
                         <tr>
-                          <td><center>1</center></td>
-                          <td>26/11/61</td>
-                          <td>ลิฟ เอง</td>
-                          <td>kaj@gmail.com</td>
-                          <td>คอมพิวเตอร์</td>
-                          <td>เสีย</td>
-                          <td>ลิฟเอง</td>
-                          <td>แจ้งซ่อม</td>
-                          <td>file รูป VDO บลา ๆ</td>
+                          <td><?php echo $arr1[date]; ?></td>
+                          <td><?php echo $arr1[code]; ?></td>
+                          <td><?php echo $arr1[equipment]; ?></td>
+                          <td><?php echo $arr1[brand]; ?></td>
+                          <td><?php echo $arr1[generation]; ?></td>
+                          <td><?php echo $arr1[issue]; ?></td>
+                          <td><?php echo $arr1[username]; ?></td>
+                          <td><?php echo $arr1[department]; ?></td>
+                          <td><?php echo $arr1[phonenumber]; ?></td>
+                          <td><?php echo $arr1[email]; ?></td>
+                          <td>
+                              <?php echo $arr1[manager]; ?>
+                              <center><button type="submit" name="update"class="btn btn-danger" >แก้ไข</button></center>
+                          </td>
+                          <td><?php echo $arr1[status]; ?></td>
+                          <td><?php echo $arr1[description]; ?></td>
+                          <td><input type="hidden" name="id" value="<?php echo $arr1[id]; ?>">
+                              <center><button type="submit" name="delete" class="btn btn-danger">ลบ</button></center>
+                          </td>
                         </tr>  
                       </tbody>
+                      <?php } ?> 
+                      </form>
                     </table>
                   </div>
                 </aside>

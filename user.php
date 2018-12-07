@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="utf-8">
-  <title>แจ้งซ่อมอุปกรณ์</title>
+  <title>แจ้งซ่อมอุปกรณ์ครุภัณฑ์</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Clean responsive bootstrap website template">
   <meta name="author" content="">
@@ -67,6 +67,45 @@ button {
 </head>
 
 <body>
+ <?php 
+include 'config.php';
+
+
+if ( isset($_POST[submit]) ) {
+
+  $date = $_POST[date];
+  $code = $_POST[code];
+  $equipment = $_POST[equipment];
+  $brand = $_POST[brand];
+  $gen = $_POST[generation];
+  $issue = $_POST[issue];
+  $username = $_POST[username];
+  $department = $_POST[department];
+  $phone = $_POST[phonenumber];
+  $email = $_POST[email];
+  $manager = $_POST[manager];
+  $status = $_POST[status];
+  $description = $_POST[description];
+
+  $sql = "INSERT INTO report (  date,code,equipment,brand,generation,issue,username,department,phonenumber,email,manager,status,description )  values (  '$date','$code','$equipment','$brand','$gen','$issue' ,'$username','$department','$phone','$email','$manager','$status','$description' )  ;";
+
+  $query = pg_query($sql);
+  if ($query) {
+     $text = '<div class="alert alert-success alert-dismissible">
+        <a  class="close" data-dismiss="alert" aria-label="close">&times;</a>
+        <strong>Success!</strong> Indicates a successful or positive action.
+      </div>';
+  }else{
+    $text = '<div class="alert alert-success alert-dismissible">
+        <a  class="close" data-dismiss="alert" aria-label="close">&times;</a>
+        <strong>Success!</strong> Indicates a successful or positive action.
+      </div>';
+  }
+
+ 
+
+}
+?> 
  <?php include 'menu.php'; ?>
 
   <section id="subintro">
@@ -74,12 +113,12 @@ button {
     <div class="container">
       <div class="row">
         <div class="span4">
-          <h3>หน้า <strong>แจ้งซ่อมอุปกรณ์ user</strong></h3>
+          <h3>แจ้งซ่อม <strong>อุปกรณ์ครุภัณฑ์</strong></h3>
         </div>
         <div class="span8">
           <ul class="breadcrumb notop">
             <li><a href="index.php">Home</a><span class="divider">/</span></li>
-            <li class="active">หน้าแจ้งซ่อมอุปกรณ์</li>
+            <li class="active">แจ้งซ่อมอุปกรณ์ครุภัณฑ์ </li>
           </ul>
         </div>
       </div>
@@ -96,34 +135,28 @@ button {
               <div class="span8">
                 <aside>
                   <div class="widget">
-                    <h4>อุปกรณ์</h4>
+                    <form action="tableu.php" method="post">
+                      <?php echo $text; ?>
+                    <h4>ใบแจ้งซ่อมครุภัณฑ์</h4>
                     <ul class="project-detail">
                       <li>
-                        <input type="text" name="yymmdd" class="nav-link"placeholder="Y/m/d">
-                      </li>
-                      <li>
-                        <input type="number" name="#" class="nav-link"placeholder="หมายเลขห้อง">
-                      </li>
-                      <li>
-                        <select name="เครื่องหมาย"class="nav-link" >
-                          <option value="#"><b>คอมพิวเตอร์</b></option>
-                          <option value="#"><b>ปลั๊กไฟ</b></option>
-                          <option value="#"><b>หลอดไฟ</b></option>
-                          <option value="#"><b>สายไฟ</b></option>
-                          <option value="#"><b>ทีวี</b></option>
-                          <option value="#"><b>ตู้เย็น</b></option>
-                        </select>
-                      </li>
-                      <li>
-                        <input type="text" name="เสีย" class="widget"placeholder="เสียเพราะอะไร"><br>
-                        <input type="text" name="เบอร์ติดต่อ" class="widget"placeholder="เบอร์ติดต่อ"><br>
-                        <input type="text" name="E-mail" class="widget"placeholder="E-mail"><br>
-                        <input type="file" name="newfile" class="widget"><br>
+                        <input type="date" name="date" class="widget"placeholder="yy/mm/dd"><br>
+                        <input type="number" name="code" class="widget"placeholder="รหัสครุภัณฑ์">
+                        <input type="text" name="equipment" class="widget"placeholder="อุปกรณ์"><br>
+                        <input type="text" name="brand" class="widget"placeholder="ยี่ห้อ">
+                        <input type="text" name="generation" class="widget"placeholder="รุ่น"><br>
+                        <input type="text" name="issue" class="widget"placeholder="ปัญหา"><br>
+                        <input type="text" name="username" class="widget"placeholder="ชื่อ">
+                        <input type="text" name="department" class="widget"placeholder="หน่วยงาน"><br>
+                        <input type="text" name="phonenumber" class="widget"placeholder="เบอร์ติดต่อ">
+                        <input type="text" name="email" class="widget"placeholder="E-mail"><br>
 
-                        <button type="submit"  class="btn btn-danger">ส่ง</button> 
-                      </li>
+                        <input type="file" name="description" class="widget"><br>
 
+                        <button type="submit" name="submit" class="btn btn-danger">ส่ง</button> 
+                      </li>
                     </ul>
+                    </form>
                   </div>
                 </aside>
                 </div>

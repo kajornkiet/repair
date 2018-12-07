@@ -7,15 +7,14 @@
           <div class="widget">
             <!-- logo -->
             <div class="footerlogo">
-              <h6><a href="index.html">Plato</a></h6>
+              <h6><a href="index.html">ที่อยู่</a></h6>
               <!-- <img src="assets/img/logo.png" alt="" /> -->
             </div>
             <!-- end logo -->
             <address>
-        <strong>ที่อยู่</strong><br>
-         บลาบลาบลาบลาบลาบลาบลา<br>
-         หกดหกดหกดหกดหกดหกด<br>
-        <abbr title="Phone">P:</abbr> 085-0000000 </address>
+         สถานภูมิภาคเทคโนโลยีอวกาศและภูมิสารสนเทศ <br>ภาคเหนือตอนล่าง มหาวิทยาลัยนเรศวร<br>
+         ชั้น 4 ตึก A อาคารมหาธรรมราชา ตำบลท่าโพธิ์ <br>อำเภอเมือง จังหวัดพิษณุโลก 65000<br>
+        <abbr title="Phone">โทรศัพท์:</abbr> 055-968707  </address>
           </div>
         </div>
         <div class="span3">
@@ -35,13 +34,9 @@
         </div>
         <div class="span3">
           <div class="widget">
-            <h5>Keep updated</h5>
+            <h5>social media</h5>
             <ul class="social-network">
-              <li><a href="#"><i class="icon-bg-light icon-facebook icon-circled icon-1x"></i></a></li>
-              <li><a href="#" title="Twitter"><i class="icon-bg-light icon-twitter icon-circled icon-1x"></i></a></li>
-              <li><a href="#" title="Linkedin"><i class="icon-bg-light icon-linkedin icon-circled icon-1x"></i></a></li>
-              <li><a href="#" title="Pinterest"><i class="icon-bg-light icon-pinterest icon-circled icon-1x"></i></a></li>
-              <li><a href="#" title="Google plus"><i class="icon-bg-light icon-google-plus icon-circled icon-1x"></i></a></li>
+              <li><a href="#"><i class="icon-bg-light icon-facebook icon-circled icon-1x"></i></a></li> 
             </ul>
           </div>
         </div>
@@ -50,23 +45,10 @@
     <div class="subfooter">
       <div class="container">
         <div class="row">
-          <div class="span6">
+          <div class="span12">
             <p>
-              &copy; Plato - All right reserved
+              &copy; GISTNU
             </p>
-          </div>
-          <div class="span6">
-            <div class="pull-right">
-              <div class="credits">
-                <!--
-                  All the links in the footer should remain intact.
-                  You can delete the links only if you purchased the pro version.
-                  Licensing information: https://bootstrapmade.com/license/
-                  Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/buy/?theme=Plato
-                -->
-                Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
-              </div>
-            </div>
           </div>
         </div>
       </div>

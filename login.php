@@ -3,16 +3,17 @@
 
 <head>
   <meta charset="utf-8">
-  <title>Login</title>
+  <title>login</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Clean responsive bootstrap website template">
   <meta name="author" content="">
   <!-- styles -->
-  <link href="assets/css/bootstrap.css" rel="stylesheet">
+  
   <link href="assets/css/bootstrap-responsive.css" rel="stylesheet">
   <link href="assets/css/docs.css" rel="stylesheet">
   <link href="assets/css/prettyPhoto.css" rel="stylesheet">
   <link href="assets/js/google-code-prettify/prettify.css" rel="stylesheet">
+  <link href="assets/css/prettyPhoto.css" rel="stylesheet">
   <link href="assets/css/flexslider.css" rel="stylesheet">
   <link href="assets/css/refineslide.css" rel="stylesheet">
   <link href="assets/css/font-awesome.css" rel="stylesheet">
@@ -29,92 +30,67 @@
   <link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/ico/apple-touch-icon-72-precomposed.png">
   <link rel="apple-touch-icon-precomposed" href="assets/ico/apple-touch-icon-57-precomposed.png">
 
+  <link rel="stylesheet" type="text/css" href="fonts/iconic/css/material-design-iconic-font.min.css">
+  <link rel="stylesheet" type="text/css" href="assets/css/lif1.css">
+  <link rel="stylesheet" type="text/css" href="assets/css/lif.css">
   <link href="https://fonts.googleapis.com/css?family=Maitree" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Krub" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Athiti" rel="stylesheet">
 
-  <!-- =======================================================
-    Theme Name: Plato
-    Theme URL: https://bootstrapmade.com/plato-responsive-bootstrap-website-template/
-    Author: BootstrapMade.com
-    Author URL: https://bootstrapmade.com
-  ======================================================= -->
+
 </head>
-
 <body>
-<?php include 'menu.php'; ?>
-  <section id="subintro">
-    <div class="container">
-      <div class="row">
-        <div class="span4">
-          <h3>login</strong></h3>
-        </div>
-        <div class="span8">
-          <ul class="breadcrumb notop">
-            <li><a href="index.php">Home</a><span class="divider">/</span></li>
-            <li class="active">login</li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </section>
-  <section id="maincontent">
-    <div class="container">
-      <div class="row">
-        <div class="span12">
-          <article>
-            <div class="heading">
-              <h3><strong>คิดไม่ออก</strong></h3>
-            </div>
-            <div class="clearfix">
-            </div>
-            <div class="row">
-              <div class="span12">
-                <aside>
-                  <center><div class="container">
-                    <form>
-                      <div class="form-group">
-                        <label for="usr">Name:</label>
-                         <input type="text" class="form-control" id="usr">
-                      </div>
-                      <div class="form-group">
-                        <label for="pwd">Password:</label>
-                          <input type="password" class="form-control" id="pwd">
-                      </div> 
-                    </form>
-                  </div>
-                  </center>
-                </aside>
-                </div>
-            </div>
-          </article>
-        </div>
-      </div>
-    </div>
-  </section>
-
-   
-
   
-  <?php include 'footer.php'; ?>
-  <script src="assets/js/jquery.js"></script>
-  <script src="assets/js/modernizr.js"></script>
-  <script src="assets/js/jquery.easing.1.3.js"></script>
-  <script src="assets/js/google-code-prettify/prettify.js"></script>
-  <script src="assets/js/bootstrap.js"></script>
-  <script src="assets/js/jquery.prettyPhoto.js"></script>
-  <script src="assets/js/portfolio/jquery.quicksand.js"></script>
-  <script src="assets/js/portfolio/setting.js"></script>
-  <script src="assets/js/hover/jquery-hover-effect.js"></script>
-  <script src="assets/js/jquery.flexslider.js"></script>
-  <script src="assets/js/classie.js"></script>
-  <script src="assets/js/cbpAnimatedHeader.min.js"></script>
-  <script src="assets/js/jquery.refineslide.js"></script>
-  <script src="assets/js/jquery.ui.totop.js"></script>
+  <div class="limiter">
+    <div class="container-login100">
+      <div class="wrap-login100">
 
-  <!-- Template Custom Javascript File -->
-  <script src="assets/js/custom.js"></script>
+        <form class="login100-form validate-form">
+          <span class="login100-form-title p-b-26">
+            login
+          </span>
+          <span class="login100-form-title p-b-48">
+            <i class="zmdi zmdi-font"></i>
+          </span>
+
+          <div class="wrap-input100 validate-input" data-validate = "Valid email is: a@b.c">
+            <input class="input100" type="text" name="username">
+            <span class="focus-input100" data-placeholder="Username"></span>
+          </div>
+
+          <div class="wrap-input100 validate-input" data-validate="Enter password">
+            <span class="btn-show-pass">
+              <i class="zmdi zmdi-eye"></i>
+            </span>
+            <input class="input100" type="password" name="pass">
+            <span class="focus-input100" data-placeholder="Password"></span>
+          </div>
+
+          <div class="container-login100-form-btn">
+            <div class="wrap-login100-form-btn">
+              <div class="login100-form-bgbtn"></div>
+              <button class="login100-form-btn">
+                Login
+              </button>
+            </div>
+          </div>
+
+          <div class="text-center p-t-115">
+            <span class="txt1">
+              Don’t have an account?
+            </span>
+
+            <a class="txt2" href="#">
+              Sign Up
+            </a>
+          </div>
+          <center><a href="index.php" class="icon-bg-dark icon-circled icon-home"></a></center>
+        </form>
+      </div>
+    </div>
+  </div>
+  
+
 
 </body>
-
 </html>

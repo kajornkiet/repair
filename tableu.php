@@ -43,7 +43,34 @@
 
 </head>
 
-<body>
+<body> 
+<?php 
+include 'config.php';
+
+
+if ( isset($_POST[submit]) ) {
+
+  $date = $_POST[date];
+  $code = $_POST[code];
+  $equipment = $_POST[equipment];
+  $brand = $_POST[brand];
+  $gen = $_POST[generation];
+  $issue = $_POST[issue];
+  $username = $_POST[username];
+  $department = $_POST[department];
+  $phone = $_POST[phonenumber];
+  $email = $_POST[email];
+  $manager = $_POST[manager];
+  $status = $_POST[status];
+  $description = $_POST[description];
+
+  $sql = "INSERT INTO report (  date,code,equipment,brand,generation,issue,username,department,phonenumber,email,manager,status,description )  values (  '$date','$code','$equipment','$brand','$gen','$issue' ,'$username','$department','$phone','$email','$manager','$status','$description' )  ;";
+
+  $query = pg_query($sql);
+
+}
+?>
+
 <?php include 'menu.php'; ?>
   <section id="subintro">
     <div class="container">
@@ -68,39 +95,55 @@
             <div class="heading">
               <h3><strong>ตารางบันทึกการดำเนินการแจ้งซ่อม</strong></h3>
             </div>
-            </div>
+          </div>
             <div class="row">
               <div class="span12">
                 <aside>
-                  <div class="clearfix">             
-                    <table class="table table-bordered">
+                  <div class="clearfix">  
+                  <form action="tableu.php" method="post">           
+                    <table class="table table-bordered"> 
                       <thead>
-                        <tr>
-                          <th>ลำดับ</th>
+                        <tr> 
                           <th>วันที่แจ้ง</th>
-                          <th>ชื่อ-นามสกุล</th>
-                          <th>E-mail</th>
+                          <th>รหัสครุภัณฑ์</th>
                           <th>อุปกรณ์</th>
+                          <th>ยี่ห้อ</th>
+                          <th>รุ่น</th>
                           <th>ปัญหา</th>
+                          <th>ชื่อผู้แจ้งซ่อม</th>
+                          <th>หน่วยงาน</th>
+                          <th>เบอร์ติดต่อ</th>
+                          <th>E-mail</th>
                           <th>ผู้ดำเนินการ</th>
                           <th>สถานะ</th>
                           <th>รายละเอียด</th>
                         </tr>
                       </thead>
+                      <?php 
+                          $sql1 = 'SELECT * from report  order by id asc';
+                          $query1 = pg_query($sql1);
+                          while ( $arr1 = pg_fetch_array( $query1 ) ) {
+                      ?>
                       <tbody>
                         <tr>
-                          <td><center>1</center></td>
-                          <td>26/11/61</td>
-                          <td>ลิฟ เอง</td>
-                          <td>kaj@gmail.com</td>
-                          <td>คอมพิวเตอร์</td>
-                          <td>เสีย</td>
-                          <td>ลิฟเอง</td>
-                          <td>แจ้งซ่อม</td>
-                          <td>file รูป VDO บลา ๆ</td>
+                          <td><?php echo $arr1[date]; ?></td>
+                          <td><?php echo $arr1[code]; ?></td>
+                          <td><?php echo $arr1[equipment]; ?></td>
+                          <td><?php echo $arr1[brand]; ?></td>
+                          <td><?php echo $arr1[generation]; ?></td>
+                          <td><?php echo $arr1[issue]; ?></td>
+                          <td><?php echo $arr1[username]; ?></td>
+                          <td><?php echo $arr1[department]; ?></td>
+                          <td><?php echo $arr1[phonenumber]; ?></td>
+                          <td><?php echo $arr1[email]; ?></td>
+                          <td><?php echo $arr1[manager]; ?></td>
+                          <td><?php echo $arr1[status]; ?></td>
+                          <td><?php echo $arr1[description]; ?></td>
                         </tr>  
                       </tbody>
+                      <?php } ?> 
                     </table>
+                  </form>
                   </div>
                 </aside>
                 </div>
